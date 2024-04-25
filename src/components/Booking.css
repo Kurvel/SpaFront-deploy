@@ -1,0 +1,14 @@
+html,
+body {
+  background-color: rgb(208, 224, 231);
+  font-size: 1.2em;
+  margin: 0;
+  font-family: Segoe UI, Tahoma, sans-serif;
+  color: antiquewhite;
+}
+
+.Booking {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
