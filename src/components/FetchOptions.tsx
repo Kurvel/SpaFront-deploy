@@ -22,7 +22,7 @@ const FetchOptionsComponent: React.FC<FetchOptionsProps> = ({
   const [fetchOptions, setFetchOptions] = useState<FetchOptions[]>([]);
 
   const fetchData = () => {
-    fetch("http://localhost:8080/dates")
+    fetch("https://coral-app-ckbr4.ondigitalocean.app/dates")
       .then((res) => res.json())
       .then((data: FetchOptions[]) => {
         setFetchOptions(data)

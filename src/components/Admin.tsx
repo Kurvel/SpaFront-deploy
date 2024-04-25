@@ -30,14 +30,14 @@ function Admin() {
     const fetchDateDetails = (id: string) => {
         setDates([]); // Clear the dates state
         
-        fetch("http://localhost:8080/date/" + id)
+        fetch("https://coral-app-ckbr4.ondigitalocean.app/date/" + id)
         .then(res => res.json())
         .then(data => setSelectedDate(data));
     }
 
     const updateDate = () => {
         if (selectedDate) {
-            fetch(`http://localhost:8080/date/${selectedDate.id}`, {
+            fetch(`https://coral-app-ckbr4.ondigitalocean.app/${selectedDate.id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ function Admin() {
                 
                 setSelectedDate(null);
                 
-                fetch("http://localhost:8080/dates")
+                fetch("https://coral-app-ckbr4.ondigitalocean.app/dates")
             .then(res => res.json())
             .then(data => setDates(data));
                

@@ -60,7 +60,7 @@ function Booking() {
 
     const isoDate = (newDate as Date).toISOString();
 
-    fetch("http://localhost:8080/date", {
+    fetch("https://coral-app-ckbr4.ondigitalocean.app/date", {
       method: "POST",
       headers: {
         "content-type": "application/json",
