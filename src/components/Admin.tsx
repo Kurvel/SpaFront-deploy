@@ -14,13 +14,13 @@ function Admin() {
     const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
     useEffect(() => {
-        fetch("http://localhost:8080/dates")
+        fetch("https://coral-app-ckbr4.ondigitalocean.app/dates")
         .then(res => res.json())
         .then(data => setDates(data));
     }, []);
 
     const deleteDate = (id: string) => {
-        fetch("http://localhost:8080/date/" + id, {
+        fetch("https://coral-app-ckbr4.ondigitalocean.app/date/" + id, {
             method: 'DELETE',
         })
         .then(res => res.json())
@@ -37,7 +37,7 @@ function Admin() {
 
     const updateDate = () => {
         if (selectedDate) {
-            fetch(`https://coral-app-ckbr4.ondigitalocean.app/${selectedDate.id}`, {
+            fetch(`https://coral-app-ckbr4.ondigitalocean.app/date/${selectedDate.id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',

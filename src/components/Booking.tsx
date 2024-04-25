@@ -97,7 +97,7 @@ function Booking() {
   };
 
   useEffect(() => {
-    fetch("http://sholiday.faboul.se/dagar/v2.1/2024")
+    fetch("https://sholiday.faboul.se/dagar/v2.1/2024")
       .then((response) => response.json())
       .then((data) => {
         const redDays = data.dagar
